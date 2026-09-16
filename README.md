@@ -1,5 +1,24 @@
 # Nexus Memory
 
+## Current Prototype Demo
+
+[![Nexus Memory 현재 프로토타입 데모: subtask 입력, 1인칭 정책 관측, 3인칭 observer와 action trajectory](record/4eba2d0_250917_0142_poster.jpg)](record/4eba2d0_250917_0142.mp4)
+
+사용자가 직접 `sub_task`를 입력하면 memory-free low-level agent가 누적 RGB와
+현재 보이는 객체 metadata를 바탕으로 행동합니다. 콘솔에서는 agent가 실제로
+사용하는 1인칭 관측과 디버깅용 3인칭 observer, 실행 결과와 action trajectory를
+함께 확인할 수 있습니다.
+
+**[▶ 전체 데모 보기 (MP4, 4분 49초)](record/4eba2d0_250917_0142.mp4)**
+
+**영상 내 SubTask 성공 장면**
+
+- **[0:03](record/4eba2d0_250917_0142.mp4#t=3)** — `go to the door`
+- **[3:42](record/4eba2d0_250917_0142.mp4#t=222)** — `open the refrigerator and break the egg into the floor`
+
+> 이 영상은 최종 성능을 주장하는 결과가 아니라, high-level memory를 실험하기
+> 전에 구축 중인 low-level subtask execution 기준선의 현재 동작을 보여줍니다.
+
 ## 궁극적인 목표
 
 상위 memory 시스템이 하나의 `sub_task`를 만들면, low-level agent가
