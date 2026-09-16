@@ -21,6 +21,8 @@ anyio==4.15.1
     #   starlette
 aws-requests-auth==0.4.3
     # via ai2thor
+bitsandbytes==0.49.2
+    # via nexus-memory
 blinker==1.9.0
     # via flask
 botocore==1.43.93
@@ -128,10 +130,12 @@ numpy==2.5.3
     # via
     #   accelerate
     #   ai2thor
+    #   bitsandbytes
     #   gradio
     #   nexus-memory
     #   opencv-python
     #   pandas
+    #   torchvision
     #   transformers
 nvidia-cublas==13.1.1.3 ; sys_platform == 'linux'
     # via
@@ -181,6 +185,7 @@ orjson==3.12.0
 packaging==26.3
     # via
     #   accelerate
+    #   bitsandbytes
     #   gradio
     #   gradio-client
     #   huggingface-hub
@@ -192,6 +197,7 @@ pillow==12.3.0
     #   ai2thor
     #   gradio
     #   nexus-memory
+    #   torchvision
 progressbar2==4.6.0
     # via ai2thor
 psutil==7.2.2
@@ -265,7 +271,11 @@ tomlkit==0.14.0
 torch==2.14.0+cu130
     # via
     #   accelerate
+    #   bitsandbytes
     #   nexus-memory
+    #   torchvision
+torchvision==0.29.0+cu130
+    # via nexus-memory
 tqdm==4.70.1
     # via
     #   huggingface-hub
@@ -302,7 +312,7 @@ urllib3==2.7.0
     # via
     #   botocore
     #   requests
-uvicorn==0.52.4
+uvicorn==0.53.0
     # via gradio
 werkzeug==3.1.8
     # via
