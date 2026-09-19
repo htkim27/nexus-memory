@@ -21,3 +21,6 @@ These tracking steps do not authorize starting additional experiments or
 restarting services when the user has paused work. Document the pause and resume
 only within the user's requested scope. No extra approval is required to update
 these records as part of authorized work.
+
+# Daily Reports
+Append memos of any work performed to `report/YYYY-MM-DD.md` (KST). No format is required.
