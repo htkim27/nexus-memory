@@ -1,0 +1,10 @@
+{
+  "task": "clean_mug",
+  "version": 1,
+  "basis": "official annotation 0; exploration episode 1",
+  "reason": "The model rotated repeatedly for 40 actions and never attempted mug pickup.",
+  "overrides": {
+    "0": "Find the coffee machine in the RGB image. Scan the room with turns, then move toward the machine along visible open floor. After a full turn, choose a different action instead of continuing to rotate in place.",
+    "1": "Locate the dirty mug at the coffee machine in current RGB and pick it by bounding box. Adjust view or approach before attempting the interaction."
+  }
+}

@@ -1,0 +1,860 @@
+{
+  "prototype": "ALFRED original-rule single-scene subtask oracle induction",
+  "alfred_commit": "f91f4c0c96c7a29f33d0557f86b0a21035379b3b",
+  "ai2thor_version": "2.1.0",
+  "data_archive_sha256": "c2e9e4256f94ccb2451dcaf99ff26124777eda0f256110489d1f0eaf6a3f02e9",
+  "split_file_sha256": "c27918c1f64f58d047cb2a26d477dfdb8935bacde3504ec1ce9cb52cd2c72c83",
+  "tasks": [
+    {
+      "name": "wine_bottle",
+      "split": "train",
+      "task_id": "pick_and_place_simple-WineBottle-None-DiningTable-15",
+      "trial": "trial_T20190906_184006_967003",
+      "repeat_idx": 0,
+      "trajectory_path": "train/pick_and_place_simple-WineBottle-None-DiningTable-15/trial_T20190906_184006_967003/traj_data.json",
+      "trajectory_sha256": "9f606e2207a3717134151c75ee8d26e92ef37da389cafde401fde3b84271dbbd",
+      "instruction": "Move a wine bottle from a bin to the kitchen table.",
+      "high_instructions": [
+        "Look down at the bin that is to the right of the counter. ",
+        "Pick up the wine bottle that is in the bin.",
+        "Turn around and walk over to the left side of the kitchen table.",
+        "Place the wine bottle between the salt and pepper shakers on the table."
+      ],
+      "pddl_params": {
+        "mrecep_target": "",
+        "object_sliced": false,
+        "object_target": "WineBottle",
+        "parent_target": "DiningTable",
+        "toggle_target": ""
+      },
+      "high_pddl": [
+        {
+          "high_idx": 0,
+          "action": "GotoLocation"
+        },
+        {
+          "high_idx": 1,
+          "action": "PickupObject"
+        },
+        {
+          "high_idx": 2,
+          "action": "GotoLocation"
+        },
+        {
+          "high_idx": 3,
+          "action": "PutObject"
+        },
+        {
+          "high_idx": 4,
+          "action": "NoOp"
+        }
+      ],
+      "low_actions": [
+        {
+          "high_idx": 0,
+          "action": "LookDown_15"
+        },
+        {
+          "high_idx": 0,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 0,
+          "action": "LookDown_15"
+        },
+        {
+          "high_idx": 1,
+          "action": "PickupObject"
+        },
+        {
+          "high_idx": 2,
+          "action": "LookUp_15"
+        },
+        {
+          "high_idx": 2,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 2,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "RotateRight_90"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "RotateRight_90"
+        },
+        {
+          "high_idx": 2,
+          "action": "LookDown_15"
+        },
+        {
+          "high_idx": 3,
+          "action": "PutObject"
+        }
+      ],
+      "scene_num": 15,
+      "initial_scene_sha256": "d791832be174337e34b47c04ec93a76f669a644db950eebbb609f4754263cea6"
+    },
+    {
+      "name": "clean_mug",
+      "split": "train",
+      "task_id": "pick_clean_then_place_in_recep-Mug-None-CoffeeMachine-15",
+      "trial": "trial_T20190909_111443_363349",
+      "repeat_idx": 0,
+      "trajectory_path": "train/pick_clean_then_place_in_recep-Mug-None-CoffeeMachine-15/trial_T20190909_111443_363349/traj_data.json",
+      "trajectory_sha256": "795901027ca245fc7832e8b8fb0df7fd52193b98cda1d0808069c0c63b3a8ccc",
+      "instruction": "Put a clean mug under the coffee maker.",
+      "high_instructions": [
+        "Turn left and walk to the coffee maker.",
+        "Pick up the dirty mug that's at the coffee maker.",
+        "Turn around and walk to the sink then turn left to face it.",
+        "Wash the mug in the sink and then pick it back up and shut off the water.",
+        "Walk back over to the coffee maker.",
+        "Put the mug back where you got it."
+      ],
+      "pddl_params": {
+        "mrecep_target": "",
+        "object_sliced": false,
+        "object_target": "Mug",
+        "parent_target": "CoffeeMachine",
+        "toggle_target": ""
+      },
+      "high_pddl": [
+        {
+          "high_idx": 0,
+          "action": "GotoLocation"
+        },
+        {
+          "high_idx": 1,
+          "action": "PickupObject"
+        },
+        {
+          "high_idx": 2,
+          "action": "GotoLocation"
+        },
+        {
+          "high_idx": 3,
+          "action": "CleanObject"
+        },
+        {
+          "high_idx": 4,
+          "action": "GotoLocation"
+        },
+        {
+          "high_idx": 5,
+          "action": "PutObject"
+        }
+      ],
+      "low_actions": [
+        {
+          "high_idx": 0,
+          "action": "LookDown_15"
+        },
+        {
+          "high_idx": 0,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 0,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 0,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 0,
+          "action": "RotateRight_90"
+        },
+        {
+          "high_idx": 0,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 0,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 0,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 1,
+          "action": "PickupObject"
+        },
+        {
+          "high_idx": 2,
+          "action": "RotateRight_90"
+        },
+        {
+          "high_idx": 2,
+          "action": "RotateRight_90"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 3,
+          "action": "PutObject"
+        },
+        {
+          "high_idx": 3,
+          "action": "ToggleObjectOn"
+        },
+        {
+          "high_idx": 3,
+          "action": "ToggleObjectOff"
+        },
+        {
+          "high_idx": 3,
+          "action": "PickupObject"
+        },
+        {
+          "high_idx": 4,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 4,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 4,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 4,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 4,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 4,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 5,
+          "action": "PutObject"
+        }
+      ],
+      "scene_num": 15,
+      "initial_scene_sha256": "ff9fa4fea3f05d4e1162589df8323bca3c6fc77757e26806af6ba0bca4f0b481"
+    },
+    {
+      "name": "heated_apple_slice",
+      "split": "train",
+      "task_id": "pick_heat_then_place_in_recep-AppleSliced-None-DiningTable-15",
+      "trial": "trial_T20190907_223758_523581",
+      "repeat_idx": 0,
+      "trajectory_path": "train/pick_heat_then_place_in_recep-AppleSliced-None-DiningTable-15/trial_T20190907_223758_523581/traj_data.json",
+      "trajectory_sha256": "2efecb43a14017f8f2599034dd15da7f02c05b4475dbdb5a927b8623408de59f",
+      "instruction": "To heat a piece of apple and place it on the end of the table below the wine.",
+      "high_instructions": [
+        "Turn left and walk forward to face the end of the table.",
+        "Pick up the knife on the table.",
+        "Walk around the table to face the opposite end.",
+        "Cut the apple on the table into 3 pieces.",
+        "Turn around and step right and look up to face the microwave above the stove.",
+        "Place the knife in the microwave.",
+        "Turn left and walk forward  and turn to the left to face the end of the table.",
+        "Pick up a piece of the apple on the table.",
+        "Turn around and step right and look up to face the microwave above the stove.",
+        "Heat the piece of apple in the microwave and then remove it.",
+        "Turn around and walk across the room, then turn right and cross the room and turn right to face the end of the table.",
+        "Place the piece of apple on the edge of the table."
+      ],
+      "pddl_params": {
+        "mrecep_target": "",
+        "object_sliced": true,
+        "object_target": "Apple",
+        "parent_target": "DiningTable",
+        "toggle_target": ""
+      },
+      "high_pddl": [
+        {
+          "high_idx": 0,
+          "action": "GotoLocation"
+        },
+        {
+          "high_idx": 1,
+          "action": "PickupObject"
+        },
+        {
+          "high_idx": 2,
+          "action": "GotoLocation"
+        },
+        {
+          "high_idx": 3,
+          "action": "SliceObject"
+        },
+        {
+          "high_idx": 4,
+          "action": "GotoLocation"
+        },
+        {
+          "high_idx": 5,
+          "action": "PutObject"
+        },
+        {
+          "high_idx": 6,
+          "action": "GotoLocation"
+        },
+        {
+          "high_idx": 7,
+          "action": "PickupObject"
+        },
+        {
+          "high_idx": 8,
+          "action": "GotoLocation"
+        },
+        {
+          "high_idx": 9,
+          "action": "HeatObject"
+        },
+        {
+          "high_idx": 10,
+          "action": "GotoLocation"
+        },
+        {
+          "high_idx": 11,
+          "action": "PutObject"
+        },
+        {
+          "high_idx": 12,
+          "action": "NoOp"
+        }
+      ],
+      "low_actions": [
+        {
+          "high_idx": 0,
+          "action": "LookDown_15"
+        },
+        {
+          "high_idx": 0,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 0,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 0,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 0,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 0,
+          "action": "RotateRight_90"
+        },
+        {
+          "high_idx": 0,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 0,
+          "action": "LookDown_15"
+        },
+        {
+          "high_idx": 1,
+          "action": "PickupObject"
+        },
+        {
+          "high_idx": 2,
+          "action": "LookUp_15"
+        },
+        {
+          "high_idx": 2,
+          "action": "RotateRight_90"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 2,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 3,
+          "action": "SliceObject"
+        },
+        {
+          "high_idx": 4,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 4,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 4,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 4,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 4,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 4,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 4,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 4,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 4,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 4,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 4,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 4,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 4,
+          "action": "LookUp_15"
+        },
+        {
+          "high_idx": 4,
+          "action": "LookUp_15"
+        },
+        {
+          "high_idx": 5,
+          "action": "OpenObject"
+        },
+        {
+          "high_idx": 5,
+          "action": "PutObject"
+        },
+        {
+          "high_idx": 5,
+          "action": "CloseObject"
+        },
+        {
+          "high_idx": 6,
+          "action": "LookDown_15"
+        },
+        {
+          "high_idx": 6,
+          "action": "LookDown_15"
+        },
+        {
+          "high_idx": 6,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 6,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 6,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 6,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 6,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 6,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 6,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 6,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 6,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 6,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 6,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 6,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 7,
+          "action": "PickupObject"
+        },
+        {
+          "high_idx": 8,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 8,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 8,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 8,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 8,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 8,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 8,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 8,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 8,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 8,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 8,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 8,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 8,
+          "action": "LookUp_15"
+        },
+        {
+          "high_idx": 8,
+          "action": "LookUp_15"
+        },
+        {
+          "high_idx": 9,
+          "action": "OpenObject"
+        },
+        {
+          "high_idx": 9,
+          "action": "PutObject"
+        },
+        {
+          "high_idx": 9,
+          "action": "CloseObject"
+        },
+        {
+          "high_idx": 9,
+          "action": "ToggleObjectOn"
+        },
+        {
+          "high_idx": 9,
+          "action": "ToggleObjectOff"
+        },
+        {
+          "high_idx": 9,
+          "action": "OpenObject"
+        },
+        {
+          "high_idx": 9,
+          "action": "PickupObject"
+        },
+        {
+          "high_idx": 9,
+          "action": "CloseObject"
+        },
+        {
+          "high_idx": 10,
+          "action": "LookDown_15"
+        },
+        {
+          "high_idx": 10,
+          "action": "LookDown_15"
+        },
+        {
+          "high_idx": 10,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 10,
+          "action": "RotateLeft_90"
+        },
+        {
+          "high_idx": 10,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 10,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 10,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 10,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 10,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 10,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 10,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 10,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 10,
+          "action": "RotateRight_90"
+        },
+        {
+          "high_idx": 10,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 10,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 10,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 10,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 10,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 10,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 10,
+          "action": "MoveAhead_25"
+        },
+        {
+          "high_idx": 10,
+          "action": "RotateRight_90"
+        },
+        {
+          "high_idx": 10,
+          "action": "LookDown_15"
+        },
+        {
+          "high_idx": 11,
+          "action": "PutObject"
+        }
+      ],
+      "scene_num": 15,
+      "initial_scene_sha256": "a8575a3c6e7233d895536380a0b45762f09df0a0d8ba52581f4bc6b65f89bd5d"
+    }
+  ],
+  "budgets": {
+    "policy_actions": 1000,
+    "execution_failures": 10,
+    "exploration_episodes_per_task": 3,
+    "validation_episodes_per_task": 3
+  }
+}

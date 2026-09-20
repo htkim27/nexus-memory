@@ -1,0 +1,10 @@
+{
+  "task": "clean_mug",
+  "version": 2,
+  "basis": "official annotation 0; exploration episodes 1 and 2",
+  "reason": "Episode 2 moved toward the coffee machine, then repeated a blocked forward move until 10 execution failures.",
+  "overrides": {
+    "0": "Turn left from the start to find the coffee machine, then approach using free floor visible in RGB. If a forward move leaves the image unchanged, rotate toward an open aisle and navigate around the obstacle. Do not repeat a blocked forward move.",
+    "1": "Find the dirty mug at the coffee machine in current RGB. Select its bounding box and pick it up only when it is visible and close enough."
+  }
+}

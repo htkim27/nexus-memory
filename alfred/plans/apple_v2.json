@@ -1,0 +1,10 @@
+{
+  "task": "heated_apple_slice",
+  "version": 2,
+  "basis": "official annotation 0; exploration episodes 1 and 2",
+  "reason": "The model kept rotating and did not reach the table or acquire the knife.",
+  "overrides": {
+    "0": "From the starting view, turn left to locate the dining table, then move toward its near end along visible open floor. Once the table is in view, stop rotating in place and approach it.",
+    "1": "Look at the table surface for the butter knife. Adjust gaze if necessary, then select the knife bounding box in current RGB and pick it up before moving toward the apple."
+  }
+}
