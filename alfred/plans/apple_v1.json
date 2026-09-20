@@ -1,0 +1,10 @@
+{
+  "task": "heated_apple_slice",
+  "version": 1,
+  "basis": "official annotation 0; exploration episode 1",
+  "reason": "The model rotated repeatedly for 40 actions and never acquired the knife.",
+  "overrides": {
+    "0": "Locate the dining table in the current RGB. Rotate to find it, then approach along visible open floor. After a full turn, move or change gaze rather than continuing to rotate in place.",
+    "1": "Find the butter knife on the dining table in current RGB and pick it by bounding box. The knife is needed for the later apple slice action."
+  }
+}

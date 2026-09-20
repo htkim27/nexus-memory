@@ -1,0 +1,24 @@
+{
+  "task": "wine_bottle",
+  "version": 1,
+  "basis": "official annotation 0; exploration episodes 1 and 2",
+  "reason": "Repeated LookDown, then repeated blocked MoveAhead while looking for the bottle; one unrepaired LookAround schema error.",
+  "subtasks": [
+    {
+      "instruction": "Find the garbage can beside the counter in the current RGB. Adjust view with a rotation if looking down stops changing the image. Approach only while the view shows free space.",
+      "source_high_idx": 0
+    },
+    {
+      "instruction": "Find the wine bottle in the garbage can. Rotate or adjust view to make it visible, then pick the bottle by its RGB bounding box. If forward movement is blocked, change orientation rather than repeating it.",
+      "source_high_idx": 1
+    },
+    {
+      "instruction": "Carry the bottle to the kitchen dining table. Use the RGB view to navigate around obstacles; avoid repeating a forward move when the view stays unchanged.",
+      "source_high_idx": 2
+    },
+    {
+      "instruction": "Place the wine bottle on the dining table by selecting the table bounding box in the current RGB.",
+      "source_high_idx": 3
+    }
+  ]
+}
